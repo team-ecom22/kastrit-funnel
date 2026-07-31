@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmed — KASTRIT</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="kastrit-thankyou">
+
+<header class="kx-header">
+  <div class="kx-header-in"><span class="kx-logo">KASTRIT</span></div>
+</header>
+
+<main class="kx-main">
+  <section class="kx-hero">
+    <div class="kx-check"><i class="fas fa-check"></i></div>
+    <h1 class="kx-title">Thank you, {{firstName}} {{lastName}}!</h1>
+    <p class="kx-sub">Your order <b>#{{orderId}}</b> is confirmed. Your access details are on their way to your inbox — you can start watching tonight.</p>
+  </section>
+
+  <style>
+.heading-main {
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list-of-items {
+  padding: 15px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.header-align {
+  padding: 10px 0px;
+}
+
+.div-border {
+  border: 1px solid #277098;
+  border-radius: 10px;
+}
+
+.row-style {
+  background: #277098;
+  color: #fff;
+}
+
+.row-padding {
+  padding: 8px;
+}
+
+.fk-text-right {
+  text-align: right;
+}
+
+.total-prices {
+  margin-top: 15px;
+  padding-top: 15px;
+  text-align: right;
+  border-top: 1px solid #277098;
+}
+
+.total-prices .each-price label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+</style>
+<form class="form cc-cl-invoice1" >
+  <h1 class="heading-main text-center" >
+    Your order details
+  </h1>
+  <p >
+    Here is a summary of your purchase. A copy of this receipt has also been sent to your email.
+  </p>
+  <div class="list-of-items p-2 div-border fk-element-container" >
+    <table id="fk-invoice-table" class="full-width">
+      <thead >
+        <tr class="row-style" >
+          <th colspan="3" class="row-padding" >
+            Items Ordered
+          </th>
+        </tr>
+        <tr >
+          <th class="header-align" >Item</th>
+          <th class="header-align text-center" >
+            Quantity
+          </th>
+          <th class="header-align fk-text-right" >
+            Price
+          </th>
+        </tr>
+      </thead>
+      <tbody id="items-list">
+        <tr id="fk-dynamic-invoice-row">
+          <td title="Item" class="table-cell table-text" >
+            Sample cell
+          </td>
+          <td title="Quantity" class="text-center table-text" >
+            1
+          </td>
+          <td title="Price" class="fk-text-right" >
+            $0.00
+          </td>
+        </tr>
+        <tr >
+          <td class="cell" ></td>
+        </tr>
+        <tr id="fk-dynamic-invoice-price-row">
+          <td colspan="3" >
+            <div class="total-prices" >
+              <div class="each-price" >
+                <label >Sub Total:</label>
+                <span id="subTotal"> $0.00</span>
+              </div>
+              <div class="each-price" >
+                <label >Shipping:</label>
+                <span id="sAndHFee"> $0.00</span>
+              </div>
+              <div class="each-price" >
+                <label >Sales Tax: </label>
+                <span id="tax"> $0.00</span>
+              </div>
+              <div class="each-price" >
+                <label >Discount: </label>
+                <span id="discount"> $0.00</span>
+              </div>
+              <div class="each-price" >
+                <label >Grand Total: </label>
+                <span id="grandTotal"> $0.00</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+
+  <div class="kx-grid">
+    <section class="kx-card">
+      <h2>Contact Information</h2>
+      <p>{{emailAddress}}</p>
+    </section>
+    <section class="kx-card">
+      <h2>Payment</h2>
+      <p>Amount paid: <b>{{currencySymbol}}{{amountPaid}}</b></p>
+    </section>
+    <section class="kx-card">
+      <h2>Billing Address</h2>
+      <p>{{firstName}} {{lastName}}<br>{{address1}}<br>{{city}}, {{state}} {{postalCode}}<br>{{country}}</p>
+    </section>
+    <section class="kx-card">
+      <h2>Shipping Address</h2>
+      <p>{{shipFirstName}} {{shipLastName}}<br>{{shipAddress1}}<br>{{shipCity}}, {{shipState}} {{shipPostalCode}}<br>{{shipCountry}}</p>
+      <p class="kx-note">Shipping method: {{shipMethod}} — digital product, delivered by email.</p>
+    </section>
+  </div>
+
+  <section class="kx-help">
+    <p>Questions? Write to <a href="mailto:support@kastrit.com" action="none">support@kastrit.com</a> — 30-day money-back guarantee.</p>
+  </section>
+</main>
+
+<footer class="kx-footer">
+  <span>© KASTRIT</span>
+  <a href="https://kastritofficial.com/policies/privacy-policy" action="none">Privacy</a>
+  <a href="https://kastritofficial.com/policies/terms-of-service" action="none">Terms</a>
+  <a href="https://kastritofficial.com/policies/refund-policy" action="none">Refunds</a>
+</footer>
+
+<style>
+:root{
+  --cream:#FBF8F3; --tint:#F6F2EC; --ink:#1A100D; --ink-soft:#4E4038; --muted:#8C7D71;
+  --line:#E9E0D4; --accent:#C4714A; --accent-dark:#A85A36; --accent-soft:#F3E6DB; --white:#fff;
+}
+body.kastrit-thankyou{background:var(--cream);color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+.kx-header{background:rgba(253,251,247,.95);border-bottom:1px solid var(--line);}
+.kx-header-in{max-width:900px;margin:0 auto;display:flex;align-items:center;height:60px;padding:0 20px;}
+.kx-logo{font-weight:800;font-size:19px;letter-spacing:.3em;}
+.kx-main{max-width:900px;margin:0 auto;padding:40px 20px 60px;}
+.kx-hero{text-align:center;margin-bottom:30px;}
+.kx-check{width:66px;height:66px;border-radius:50%;background:var(--accent-soft);color:var(--accent-dark);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px;}
+.kx-title{font-family:'Fraunces',serif;font-size:34px;margin:0 0 8px;}
+.kx-sub{color:var(--ink-soft);max-width:560px;margin:0 auto;}
+.kx-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;}
+@media (max-width:640px){.kx-grid{grid-template-columns:1fr;}}
+.kx-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
+.kx-card h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;}
+.kx-card p{margin:0;color:var(--ink-soft);font-size:14.5px;line-height:1.55;}
+.kx-note{margin-top:8px !important;font-size:12.5px !important;color:var(--muted) !important;}
+.kx-help{text-align:center;margin-top:30px;color:var(--ink-soft);font-size:14.5px;}
+.kx-help a{color:var(--accent-dark);font-weight:700;}
+.kx-footer{max-width:900px;margin:0 auto;padding:18px 20px 40px;display:flex;gap:18px;font-size:13px;color:var(--muted);}
+.kx-footer a{color:var(--muted);}
+.cc-cl-invoice1 .heading-main{font-family:'Fraunces',serif;font-size:26px;}
+.cc-cl-invoice1 .row-style{background:var(--ink) !important;}
+.cc-cl-invoice1 .div-border{border-color:var(--line) !important;border-radius:14px;background:var(--white);}
+</style>
+</body>
+</html>

@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Watch every braid being done — knotless, boho, cornrows — step by step, then do it yourself at home. 13 filmed videos, 47-page manual included. Stop paying $250 per salon visit.">
+<meta property="og:title" content="The Watch-Me Video Method — Learn To Braid Your Own Hair">
+<meta property="og:description" content="13 filmed videos. Watch every braid being done, then do it yourself — and keep $2,000+ a year in your pocket.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23C4714A'/%3E%3Ctext x='50' y='68' font-size='52' font-weight='800' font-family='Arial' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<title>The Watch-Me Video Method — Kastrit</title>
+<!--
+  ★ DATI INVENTATI DA SOSTITUIRE PRIMA DI PUBBLICARE (bozza) ★
+  1. "Maya" — nome, 12 anni, 1.000+ install, bio e foto instructor
+  2. Durate video: 2h 41m totali + durate per modulo
+  3. Stats bar: 2,300+ studentesse · 4.8★ · $600+ risparmiati
+  4. Recensioni: Tanya M. (Atlanta), Keisha R. (Houston), Monique D. (Charlotte)
+  5. Foto "journey" (Day 1 / Week 2 / Week 4): generate AI, sostituire con foto studentesse vere
+  6. support@kastrit.com — verificare che esista
+  7. "Rises to $59 with the next module drop" — onorare o cambiare
+  8. Metodi di pagamento: Visa · Mastercard · Amex · PayPal — verificare col checkout
+  9. CTA <a href="#" action="none"> dei bottoni acquisto → collegare al checkout in CheckoutChamp
+-->
+<!--
+  ============================================================
+  KASTRIT — Watch-Me Video Method (Variant B, rebuilt v2)
+  Standalone HTML — inline CSS/JS. Images hotlinked from the
+  original CloudFront CDN (absolute URLs — work everywhere).
+  CheckoutChamp: every CTA is <a class="btn" href="#buy" action="none"> or
+  href="#" — wire purchase buttons to the checkout step in the
+  builder. The #buy anchor scrolls to the buy card.
+  ============================================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A100D;
+    --ink-2:#120B09;
+    --ink-soft:#4E4038;
+    --muted:#8C7D71;
+    --accent:#C4714A;
+    --accent-dark:#A85A36;
+    --accent-soft:#F3E6DB;
+    --cream:#FBF8F3;
+    --tint:#F6F2EC;
+    --line:#E9E0D4;
+    --white:#fff;
+    --radius:20px;
+    --shadow:0 12px 34px rgba(26,16,13,.08);
+    --shadow-lg:0 28px 70px rgba(26,16,13,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--cream);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  .inner{max-width:1060px;margin:0 auto;padding:0 22px;}
+  .narrow{max-width:720px;margin-left:auto;margin-right:auto;}
+
+  /* ---------- type ---------- */
+  .eyebrow{
+    display:block;font-size:13px;font-weight:600;
+    letter-spacing:.19em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:16px;
+  }
+  h1.display{
+    font-size:clamp(36px,5.4vw,58px);line-height:1.05;
+    font-weight:650;letter-spacing:-.026em;
+  }
+  h1.display em{font-style:normal;color:var(--accent);}
+  h2{
+    font-size:clamp(28px,3.9vw,40px);line-height:1.12;
+    font-weight:650;letter-spacing:-.022em;
+  }
+  h3{font-size:19px;font-weight:650;letter-spacing:-.01em;}
+  .lede{font-size:clamp(17.5px,2vw,21px);color:var(--ink-soft);}
+
+  /* ---------- reveal animations ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease var(--d,0s),transform .7s ease var(--d,0s);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;
+    text-decoration:none;font-weight:600;font-size:15px;
+    padding:13px 26px;border-radius:980px;border:none;cursor:pointer;
+    letter-spacing:-.01em;text-align:center;
+    transition:background .18s,transform .18s,box-shadow .18s;
+    box-shadow:0 6px 18px rgba(196,113,74,.28);
+  }
+  .btn:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 10px 24px rgba(196,113,74,.34);}
+  .btn.lg{font-size:18px;padding:17px 42px;}
+  .btn.ondark{box-shadow:0 8px 26px rgba(196,113,74,.4);}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:60;
+    background:linear-gradient(180deg,#FDFBF7 0%,rgba(253,251,247,.92) 100%);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .site-header .inner{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .logo{font-weight:800;font-size:19px;letter-spacing:.3em;color:var(--ink);text-decoration:none;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    text-align:center;
+    padding:78px 0 64px;
+    background:
+      radial-gradient(90% 55% at 50% 0%,#FDF9F2 0%,var(--cream) 70%),
+      var(--cream);
+  }
+  .hero .eyebrow{margin-bottom:18px;}
+  .hero h1{max-width:860px;margin:0 auto 22px;}
+  .hero .lede{max-width:640px;margin:0 auto 30px;}
+  .deny{max-width:560px;margin:0 auto 26px;}
+  .deny p{
+    font-size:16.5px;color:var(--ink-soft);margin-bottom:8px;
+    padding-left:26px;position:relative;text-align:left;
+  }
+  .deny p::before{content:"✕";position:absolute;left:0;color:var(--accent);font-weight:700;}
+  .truth{
+    max-width:620px;margin:0 auto 44px;font-size:17px;color:var(--ink-soft);
+  }
+  .truth b{color:var(--ink);}
+
+  /* buy card */
+  .buybox{max-width:480px;margin:0 auto;}
+  .buycard__media{position:relative;}
+  .play-badge{
+    position:absolute;left:50%;top:37%;transform:translate(-50%,-50%);z-index:2;
+    width:74px;height:74px;border-radius:50%;
+    background:rgba(255,255,255,.93);
+    animation:pulse 2.2s ease-out infinite;
+  }
+  .play-badge::after{
+    content:"";position:absolute;left:56%;top:50%;transform:translate(-50%,-50%);
+    border-style:solid;border-width:12px 0 12px 20px;
+    border-color:transparent transparent transparent var(--accent-dark);
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 10px 30px rgba(0,0,0,.25),0 0 0 0 rgba(255,255,255,.5);}
+    50%{box-shadow:0 10px 30px rgba(0,0,0,.25),0 0 0 16px rgba(255,255,255,0);}
+  }
+  .spec-strip{
+    background:var(--ink);color:#E8D9C9;
+    font-size:12.5px;font-weight:700;letter-spacing:.05em;
+    text-align:center;padding:11px 12px;
+  }
+  .offer-title{font-size:17px;font-weight:800;margin-bottom:12px;text-align:left;}
+  .offer-list{list-style:none;text-align:left;margin-bottom:6px;}
+  .offer-list li{
+    position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:9px 0 9px 24px;border-bottom:1px dashed var(--line);
+    font-size:14.5px;color:var(--ink-soft);
+  }
+  .offer-list li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800;}
+  .offer-list b{color:var(--ink);white-space:nowrap;font-size:13.5px;}
+  .offer-total{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:12px 0 14px;font-size:14.5px;font-weight:800;
+  }
+  .offer-total b{text-decoration:line-through;color:var(--muted);font-size:16px;}
+  .pay-row{margin-top:10px;font-size:11.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;font-weight:700;}
+  .buycard{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:26px;overflow:hidden;box-shadow:var(--shadow-lg);
+    text-align:center;
+  }
+  .buycard__media{background:var(--accent-soft);}
+  .buycard__media img{width:100%;height:auto;display:block;}
+  .buycard__body{padding:26px 28px 28px;}
+  .buycard__price{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:6px;}
+  .buycard__was{font-size:19px;color:var(--muted);text-decoration:line-through;font-weight:600;}
+  .buycard__now{font-size:38px;font-weight:800;letter-spacing:-.03em;}
+  .buycard__save{
+    background:var(--accent-soft);color:var(--accent-dark);
+    font-size:12.5px;font-weight:800;letter-spacing:.06em;
+    padding:5px 12px;border-radius:999px;align-self:center;
+  }
+  .buycard__tag{
+    font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:18px;
+  }
+  .buycard .btn{width:100%;}
+  .buycard__lock{margin-top:14px;font-size:13.5px;color:var(--muted);}
+
+  /* chips row */
+  .chips{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:13px;
+    max-width:760px;margin:46px auto 0;
+  }
+  .chip{
+    background:var(--white);border:1px solid var(--line);border-radius:16px;
+    padding:16px 10px;text-align:center;box-shadow:var(--shadow);
+  }
+  .chip .ico{font-size:22px;display:block;margin-bottom:5px;}
+  .chip b{font-size:14.5px;font-weight:650;}
+
+  /* ---------- sections ---------- */
+  .sect{padding:82px 0;}
+  .sect.tint{background:var(--tint);}
+  .sect.center{text-align:center;}
+  .sect-head{text-align:center;max-width:740px;margin:0 auto 48px;}
+  .sect-head .lede{margin-top:14px;}
+
+  /* intro (tint center) */
+  .intro-points{
+    display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;
+  }
+  .intro-points span{
+    background:var(--white);border:1px solid var(--line);border-radius:999px;
+    font-size:14.5px;font-weight:600;color:var(--ink-soft);padding:9px 18px;
+  }
+
+  /* ---------- cine photo banners ---------- */
+  .cine-wrap{
+    position:relative;height:clamp(420px,62vh,620px);
+    overflow:hidden;
+  }
+  .cine-wrap img.parallax{
+    position:absolute;inset:-12% 0;width:100%;height:124%;
+    object-fit:cover;will-change:transform;
+  }
+  .cine-shade{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(26,16,13,.08) 0%,rgba(26,16,13,.22) 45%,rgba(26,16,13,.68) 100%);
+  }
+  .cine-copy{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:0 22px 58px;text-align:center;
+  }
+  .cine-copy .q{
+    max-width:680px;margin:0 auto;
+    color:#fff;font-size:clamp(24px,3.6vw,36px);
+    font-weight:650;line-height:1.2;letter-spacing:-.02em;
+    text-shadow:0 2px 18px rgba(0,0,0,.35);
+  }
+
+  /* ---------- dark math ---------- */
+  .math{background:var(--ink);color:#EFE6DC;padding:88px 0;}
+  .math .eyebrow{color:#D98F63;}
+  .math h2{color:#fff;}
+  .math .body{
+    max-width:640px;margin:18px auto 42px;text-align:center;
+    color:#C8B8AA;font-size:17.5px;
+  }
+  .math .sect-head{margin-bottom:14px;}
+  .fee-stack{
+    max-width:560px;margin:0 auto 46px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:var(--radius);overflow:hidden;
+  }
+  .fee-row{
+    display:flex;justify-content:space-between;gap:14px;
+    padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.09);
+    font-size:15.5px;color:#C8B8AA;
+  }
+  .fee-row b{color:#fff;white-space:nowrap;}
+  .fee-row:last-child{border-bottom:none;}
+  .fee-row.total{background:rgba(196,113,74,.16);font-weight:700;color:#E8B48D;}
+  .fee-row.total b{color:#E8B48D;}
+  .statrow{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+    max-width:820px;margin:0 auto 40px;
+  }
+  .s{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.11);
+    border-radius:var(--radius);text-align:center;padding:32px 14px;
+  }
+  .s .big{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.03em;display:block;color:#fff;}
+  .s.accent{background:rgba(196,113,74,.14);border-color:rgba(196,113,74,.45);}
+  .s.accent .big{color:#E8B48D;}
+  .s .lbl{font-size:14px;color:#B7A493;margin-top:6px;display:block;}
+  .math .payoff{max-width:600px;margin:0 auto 34px;text-align:center;font-size:17px;color:#C8B8AA;}
+  .math .payoff b{color:#fff;}
+  .math .center{text-align:center;}
+
+  /* ---------- yt objection ---------- */
+  .yt-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin:0 auto;}
+  .yt-col .cmp-price{font-size:24px;font-weight:800;letter-spacing:-.02em;display:block;margin-bottom:2px;}
+  .yt-col .cmp-sub{font-size:12.5px;color:var(--muted);display:block;margin-bottom:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;}
+  .yt-col.good .cmp-sub{color:#B7A493;}
+  .yt-col.good .cmp-price{color:#E8B48D;}
+  .yt-col{border-radius:var(--radius);padding:32px 30px;}
+  .yt-col.bad{background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);}
+  .yt-col.good{background:var(--ink);color:#EFE6DC;}
+  .yt-col h3{margin-bottom:16px;}
+  .yt-col.good h3{color:#fff;}
+  .yt-col ul{list-style:none;}
+  .yt-col li{padding-left:28px;position:relative;margin-bottom:11px;font-size:15.5px;color:var(--ink-soft);}
+  .yt-col.good li{color:#C8B8AA;}
+  .yt-col.bad li::before{content:"✕";position:absolute;left:0;color:#B4553D;font-weight:800;}
+  .yt-col.good li::before{content:"✓";position:absolute;left:0;color:#D98F63;font-weight:800;}
+  .yt-kicker{text-align:center;max-width:620px;margin:36px auto 0;font-size:17px;color:var(--ink-soft);}
+
+  /* ---------- pains ---------- */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .pain-card{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:30px 26px;
+  }
+  .pain-card .ico{font-size:28px;display:block;margin-bottom:12px;}
+  .pain-card h3{margin-bottom:8px;font-size:17.5px;}
+  .pain-card p{font-size:14.8px;color:var(--ink-soft);}
+
+  /* ---------- imagine ---------- */
+  .imagine-list{
+    display:grid;grid-template-columns:1fr 1fr;gap:13px 26px;
+    max-width:800px;margin:40px auto 0;list-style:none;text-align:left;
+  }
+  .imagine-list li{
+    background:var(--white);border:1px solid var(--line);border-radius:14px;
+    padding:15px 18px 15px 46px;position:relative;font-size:16px;
+  }
+  .imagine-list li::before{
+    content:"✓";position:absolute;left:17px;top:14px;
+    color:var(--accent);font-weight:800;font-size:17px;
+  }
+  .imagine-close{margin-top:34px;font-size:17px;color:var(--ink-soft);}
+
+  /* ---------- image slots / placeholders ---------- */
+  .ph{
+    position:relative;overflow:hidden;
+    background:linear-gradient(150deg,#F3E6DB 0%,#E9CDB8 100%);
+    border:1.5px dashed #D8AE8F;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .ph .ph-label{
+    font-size:11.5px;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:#A9663F;padding:10px 16px;line-height:1.5;
+  }
+  .ph .ph-play{
+    position:absolute;width:54px;height:54px;border-radius:50%;
+    background:rgba(255,255,255,.92);box-shadow:0 8px 20px rgba(0,0,0,.14);
+  }
+  .ph .ph-play::after{
+    content:"";position:absolute;left:53%;top:50%;transform:translate(-50%,-50%);
+    border-style:solid;border-width:9px 0 9px 15px;
+    border-color:transparent transparent transparent var(--accent-dark);
+  }
+  .ph .ph-play + .ph-label{position:absolute;bottom:8px;left:0;right:0;}
+
+  /* ---------- modules ---------- */
+  .mod-card{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:0 0 26px;overflow:hidden;
+  }
+  .mod-thumb{aspect-ratio:16/10;}
+  .mod-thumb img{width:100%;height:100%;object-fit:cover;}
+  .mod-card .mod-body{padding:22px 26px 0;}
+  .mod-num{
+    font-size:11.5px;font-weight:800;letter-spacing:.18em;
+    color:var(--accent);text-transform:uppercase;display:block;margin-bottom:10px;
+  }
+  .mod-card h3{margin-bottom:8px;font-size:17.5px;}
+  .mod-card p{font-size:14.8px;color:var(--ink-soft);}
+
+  /* ---------- styles gallery (bonus #2) ---------- */
+  .styles-gallery{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px;
+  }
+  .style-tile{border-radius:12px;overflow:hidden;aspect-ratio:3/4;position:relative;}
+  .style-tile img{width:100%;height:100%;object-fit:cover;}
+  .style-tile .cap{
+    position:absolute;left:0;right:0;bottom:0;
+    background:linear-gradient(180deg,transparent,rgba(26,16,13,.72));
+    color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;
+    padding:16px 8px 7px;text-align:center;text-transform:uppercase;
+  }
+
+  /* ---------- bonuses ---------- */
+  .bonus-list{display:grid;gap:18px;max-width:840px;margin:0 auto;}
+  .bonus-card{
+    display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);
+  }
+  .bonus-card.featured{background:var(--accent-soft);border-color:#E4C6B0;}
+  .bonus-badge{
+    background:var(--accent);color:#fff;font-size:11.5px;font-weight:800;
+    letter-spacing:.12em;padding:8px 14px;border-radius:999px;white-space:nowrap;margin-top:2px;
+  }
+  .bonus-card h3{margin-bottom:8px;}
+  .bonus-card p{font-size:15px;color:var(--ink-soft);}
+  .bonus-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .bonus-tags span{
+    background:var(--cream);border:1px solid var(--line);
+    font-size:13px;font-weight:600;color:var(--ink-soft);
+    padding:5px 13px;border-radius:999px;
+  }
+
+  /* ---------- edges ---------- */
+  .edges-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;
+    max-width:940px;margin:0 auto;
+  }
+  .edges-visual{
+    border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);
+    background:linear-gradient(150deg,var(--accent-soft),#E9CDB8);
+    padding:42px 34px;text-align:center;
+  }
+  .edges-visual .big{font-size:50px;display:block;margin-bottom:12px;}
+  .edges-visual p{font-size:16.5px;color:var(--accent-dark);font-weight:700;line-height:1.45;}
+  .edges-copy p{margin-bottom:14px;color:var(--ink-soft);font-size:16.5px;}
+  .edges-copy b{color:var(--ink);}
+  .edges-copy h2{margin-bottom:18px;}
+
+  /* ---------- testimonials ---------- */
+  .testi-card{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:28px 26px;display:flex;flex-direction:column;
+  }
+  .stars{color:#D99A3E;font-size:17px;letter-spacing:2px;margin-bottom:14px;}
+  .testi-card blockquote{font-size:15.3px;color:var(--ink-soft);margin-bottom:20px;flex:1;}
+  .testi-who{display:flex;align-items:center;gap:12px;}
+  .testi-who img{
+    width:46px;height:46px;border-radius:50%;object-fit:cover;
+    border:2px solid var(--accent-soft);
+  }
+  .testi-who b{display:block;font-size:14px;}
+  .testi-who span{font-size:13px;color:var(--accent-dark);font-weight:600;}
+
+  /* ---------- guarantee ---------- */
+  .guarantee{
+    max-width:740px;margin:0 auto;
+    display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 36px;
+  }
+  .g-seal{
+    width:88px;height:88px;border-radius:50%;flex-shrink:0;
+    background:var(--accent-soft);border:2px dashed var(--accent);
+    display:flex;align-items:center;justify-content:center;font-size:36px;
+  }
+  .guarantee h3{margin-bottom:8px;font-size:20px;}
+  .guarantee p{font-size:15.3px;color:var(--ink-soft);}
+
+  /* ---------- faq ---------- */
+  .faq-list{max-width:740px;margin:0 auto;}
+  .faq-list details{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:16px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  .faq-list summary{
+    list-style:none;cursor:pointer;padding:19px 54px 19px 24px;
+    position:relative;font-weight:650;font-size:16px;
+  }
+  .faq-list summary::-webkit-details-marker{display:none;}
+  .faq-list summary::after{
+    content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);
+    font-size:24px;font-weight:300;color:var(--accent);transition:transform .2s;
+  }
+  .faq-list details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+  .faq-body{padding:0 24px 21px;font-size:15.3px;color:var(--ink-soft);}
+
+  /* ---------- final dark cta ---------- */
+  .finalcta{text-align:center;}
+  .finalcta h2{max-width:720px;margin:0 auto 14px;}
+  .finalcta .body{margin-bottom:40px;}
+  .finalcta .buycard{margin:0 auto;max-width:420px;text-align:center;}
+  .finalcta .buycard__body{color:var(--ink);}
+
+  /* ---------- footer ---------- */
+  .footer{background:var(--ink-2);color:#9C8B7C;padding:30px 0 96px;font-size:13.5px;}
+  .footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .footer a{color:#C9B39D;text-decoration:none;}
+
+  /* ---------- sticky bar ---------- */
+  .sticky{
+    position:fixed;left:0;right:0;bottom:0;z-index:70;
+    background:rgba(18,11,9,.97);backdrop-filter:blur(8px);
+    border-top:1px solid rgba(255,255,255,.08);
+    transform:translateY(110%);transition:transform .35s ease;
+  }
+  .sticky.show{transform:none;}
+  .sticky-in{
+    max-width:1060px;margin:0 auto;padding:12px 22px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .sticky .pr{display:flex;flex-direction:column;line-height:1.25;}
+  .sticky .w{font-size:12.5px;color:#9C8B7C;}
+  .sticky .n{font-size:22px;font-weight:800;color:#fff;letter-spacing:-.02em;}
+  .sticky .btn{white-space:nowrap;}
+
+  /* ---------- hero grid / proof / steps / final grid ---------- */
+  .proof-bar{margin-top:28px;text-align:center;font-size:15px;color:var(--ink-soft);}
+  .proof-bar .st{color:#D99A3E;letter-spacing:2px;}
+  .proof-bar b{color:var(--ink);}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px 26px;}
+  .step-num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border-radius:50%;
+    background:var(--accent-soft);color:var(--accent-dark);
+    font-size:20px;font-weight:800;margin-bottom:14px;
+  }
+  .step h3{margin-bottom:8px;font-size:18px;}
+  .step p{font-size:15px;color:var(--ink-soft);}
+  .final-points{list-style:none;margin:20px 0 22px;}
+  .final-points li{padding-left:26px;position:relative;margin-bottom:10px;color:#C8B8AA;font-size:15.5px;text-align:left;}
+  .final-points li::before{content:"✓";position:absolute;left:0;color:#E0A377;font-weight:800;}
+  .final-quote{font-style:italic;color:#B7A493;font-size:15px;border-left:3px solid rgba(196,113,74,.5);padding-left:14px;text-align:left;}
+  @media (min-width:881px){
+    .hero{text-align:left;}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;}
+    .hero-grid h1{margin-left:0;margin-right:0;max-width:none;}
+    .hero-grid .lede{margin-left:0;margin-right:0;max-width:none;}
+    .hero-grid .deny{margin-left:0;margin-right:0;}
+    .hero-grid .truth{margin-left:0;margin-right:0;max-width:none;}
+    .final-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;text-align:left;}
+    .final-copy h2{max-width:none;margin:12px 0 0;}
+    .final-copy .body{margin:14px 0 0;text-align:left;max-width:none;}
+  }
+  @media (max-width:880px){
+    .steps{grid-template-columns:1fr;}
+    .instructor-grid{grid-template-columns:1fr;gap:30px;}
+    .fy-grid{grid-template-columns:1fr;}
+    .paths{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){ .journey{grid-template-columns:1fr;max-width:320px;} }
+
+  /* ---------- instructor ---------- */
+  .instructor-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;max-width:960px;margin:0 auto;}
+  .instructor-photo .ph{aspect-ratio:4/5;border-radius:24px;}
+  .instructor-copy h2{margin-bottom:16px;}
+  .instructor-copy p{color:var(--ink-soft);font-size:16.5px;margin-bottom:14px;}
+  .sign{font-weight:700;color:var(--accent-dark);font-style:italic;}
+  .inst-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+  .inst-chips span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--ink-soft);}
+
+  /* ---------- member area mockup ---------- */
+  .player-mock{max-width:720px;margin:0 auto 46px;background:#241B14;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);}
+  .pm-top{display:flex;align-items:center;gap:6px;padding:12px 18px;background:#1A100D;color:#9C8B7C;font-size:12.5px;font-weight:600;}
+  .pm-dot{width:10px;height:10px;border-radius:50%;background:#4E4038;display:inline-block;}
+  .pm-video{position:relative;aspect-ratio:16/7;background:#2A1D14;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#fff;overflow:hidden;}
+  .pm-video .pm-still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .pm-video::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,16,13,.18),rgba(26,16,13,.55));z-index:1;}
+  .pm-video .pm-play,.pm-video span:not(.pm-play){position:relative;z-index:2;}
+  .pm-video span:not(.pm-play){text-shadow:0 2px 10px rgba(0,0,0,.5);font-weight:600;}
+  .pm-play{width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.92);position:relative;}
+  .pm-play::after{content:"";position:absolute;left:56%;top:50%;transform:translate(-50%,-50%);border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent var(--accent-dark);}
+  .pm-video span{font-size:14px;}
+  .pm-list{padding:4px 0 10px;}
+  .pm-row{display:flex;justify-content:space-between;gap:12px;padding:11px 20px;font-size:13.5px;color:#C8B8AA;border-top:1px solid rgba(255,255,255,.06);}
+  .pm-row b{color:#fff;font-weight:600;}
+  .pm-row .pm-dur{color:#8C7D71;white-space:nowrap;}
+  .pm-row.active{background:rgba(196,113,74,.14);}
+  .pm-row.active b{color:#E8B48D;}
+
+  /* ---------- journey ---------- */
+  .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;margin:0 auto 46px;}
+  .j-card{text-align:center;}
+  .j-card .ph{aspect-ratio:3/4;border-radius:16px;}
+  .j-cap{margin-top:10px;font-size:13.5px;font-weight:700;color:var(--ink-soft);}
+
+  /* ---------- for you / not for you ---------- */
+  .fy-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;margin:0 auto;}
+
+  /* ---------- two paths ---------- */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;margin:0 auto;}
+  .path{border-radius:var(--radius);padding:32px 30px;}
+  .path.stay{background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);}
+  .path.go{background:var(--ink);color:#EFE6DC;}
+  .path h3{margin-bottom:14px;}
+  .path.go h3{color:#fff;}
+  .path ul{list-style:none;}
+  .path li{padding-left:28px;position:relative;margin-bottom:10px;font-size:15.5px;color:var(--ink-soft);}
+  .path.go li{color:#C8B8AA;}
+  .path.stay li::before{content:"✕";position:absolute;left:0;color:#B4553D;font-weight:800;}
+  .path.go li::before{content:"✓";position:absolute;left:0;color:#D98F63;font-weight:800;}
+  .paths-kicker{text-align:center;margin-top:30px;font-size:17.5px;color:var(--ink-soft);}
+  .paths-kicker b{color:var(--ink);}
+
+
+  /* ---------- svg icons ---------- */
+  .ic{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:block;margin-bottom:12px;}
+  .chip .ic{margin:0 auto 7px;}
+  .ic-seal{width:40px;height:40px;margin:0;stroke-width:1.6;}
+  .ic-inline{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-2px;display:inline-block;}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none !important;}
+    html{scroll-behavior:auto;}
+    img.parallax{transform:none !important;}
+  }
+
+
+  /* ---------- trailer ---------- */
+  .trailer-wrap{max-width:880px;margin:0 auto;}
+  .trailer{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:16/9;box-shadow:var(--shadow-lg);background:#241B14;}
+  .trailer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:tfade 12s infinite;}
+  .trailer img:nth-of-type(2){animation-delay:4s;}
+  .trailer img:nth-of-type(3){animation-delay:8s;}
+  @keyframes tfade{0%{opacity:0}6%{opacity:1}33.3%{opacity:1}40%{opacity:0}100%{opacity:0}}
+  .trailer .t-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,16,13,0) 55%,rgba(26,16,13,.55));}
+  .trailer .t-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.93);animation:pulse 2.4s infinite;}
+  .trailer .t-play::after{content:"";position:absolute;left:56%;top:50%;transform:translate(-50%,-50%);border-style:solid;border-width:14px 0 14px 23px;border-color:transparent transparent transparent var(--accent-dark);}
+  .trailer .t-cap{position:absolute;left:22px;right:22px;bottom:18px;color:#fff;font-size:14.5px;font-weight:600;text-shadow:0 2px 10px rgba(0,0,0,.45);}
+  .trailer .t-tag{position:absolute;left:22px;top:18px;background:rgba(0,0,0,.45);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;border-radius:999px;backdrop-filter:blur(4px);}
+  @media (prefers-reduced-motion: reduce){ .trailer img{animation:none;opacity:1;} .trailer img:nth-of-type(2),.trailer img:nth-of-type(3){display:none;} .t-play{animation:none;} }
+
+  /* ---------- step thumbs ---------- */
+  .step{padding:0 0 26px;overflow:hidden;}
+  .step-thumb{aspect-ratio:16/10;}
+  .step-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .step-body{padding:22px 26px 0;}
+
+  /* ---------- empower grid ---------- */
+  .empower-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:center;max-width:1020px;margin:0 auto;text-align:left;}
+  .empower-grid img{border-radius:24px;box-shadow:var(--shadow-lg);width:100%;display:block;}
+  .empower-grid h2{margin:12px 0 18px;max-width:none;}
+  .empower-grid p{margin:0;max-width:none;}
+  @media (max-width:880px){ .empower-grid{grid-template-columns:1fr;gap:28px;text-align:center;} .empower-grid h2,.empower-grid p{margin-left:auto;margin-right:auto;} }
+
+  /* ---------- bonus thumbs ---------- */
+  .bonus-card.has-thumb{grid-template-columns:auto 1fr 148px;}
+  .bonus-thumb{width:148px;height:148px;border-radius:14px;object-fit:cover;display:block;box-shadow:0 10px 26px rgba(26,16,13,.14);}
+  @media (max-width:700px){
+    .bonus-card.has-thumb{grid-template-columns:auto 1fr;}
+    .bonus-thumb{grid-column:1 / -1;width:100%;height:210px;object-fit:cover;margin-top:4px;}
+  }
+
+  /* ---------- visual polish ---------- */
+  .pain-card,.mod-card,.step,.testi-card,.chip,.tl-step,.bonus-card{transition:transform .25s ease, box-shadow .25s ease;}
+  .pain-card:hover,.mod-card:hover,.step:hover,.testi-card:hover,.tl-step:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(26,16,13,.13);}
+  .sect-head .eyebrow::before,.sect-head .eyebrow::after{content:"";display:inline-block;width:26px;height:1px;background:var(--accent);opacity:.5;vertical-align:middle;margin:0 12px;}
+  .proof-bar{background:var(--white);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow);max-width:840px;margin:30px auto 0;padding:13px 28px;}
+
+
+  /* ================== EDITORIAL UPGRADE ================== */
+  :root{ --serif:'Fraunces',Georgia,'Times New Roman',serif; }
+  ::selection{background:var(--accent);color:#fff;}
+  ::-webkit-scrollbar{width:11px;}
+  ::-webkit-scrollbar-track{background:var(--cream);}
+  ::-webkit-scrollbar-thumb{background:#D8C4AE;border-radius:99px;border:3px solid var(--cream);}
+  ::-webkit-scrollbar-thumb:hover{background:var(--accent);}
+
+  h1.display,h2{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;}
+  h1.display{font-size:clamp(38px,5.6vw,62px);line-height:1.03;}
+  h1.display em{font-style:italic;font-weight:600;}
+  h2{font-size:clamp(29px,4vw,42px);line-height:1.1;}
+  .cine-copy .q{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.01em;}
+  .price-now,.buycard__now{font-family:var(--serif);font-weight:700;}
+  .s .big,.math-card .big-num{font-family:var(--serif);font-weight:600;}
+  .final-quote{font-family:var(--serif);font-size:16px;}
+  .drama .punch b{font-style:italic;}
+
+  /* announcement bar */
+  .announce{
+    background:var(--ink);color:#E8D9C9;
+    text-align:center;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    padding:9px 16px;
+  }
+  .announce b{color:#E8B48D;}
+
+  /* header logo mark */
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-mark{
+    width:30px;height:30px;border-radius:50%;background:var(--accent);
+    display:inline-flex;align-items:center;justify-content:center;
+    color:#fff;font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:0;
+    flex-shrink:0;
+  }
+
+  /* hero decor */
+  .hero{position:relative;overflow:hidden;}
+  .hero::before{
+    content:"";position:absolute;right:-140px;top:-140px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(196,113,74,.13),transparent 65%);pointer-events:none;
+  }
+  .hero::after{
+    content:"";position:absolute;left:-190px;bottom:-190px;width:460px;height:460px;border-radius:50%;
+    border:1.5px solid rgba(196,113,74,.18);pointer-events:none;
+  }
+  .hero .inner{position:relative;z-index:1;}
+  .hero-side .buycard{box-shadow:0 34px 90px rgba(166,90,50,.22);}
+
+  /* cine banners: inset editorial */
+  .cine-wrap{margin:0 22px;border-radius:28px;height:clamp(400px,58vh,580px);}
+  @media (min-width:1140px){ .cine-wrap{max-width:1096px;margin:0 auto;} }
+
+  /* buttons */
+  .btn{background:linear-gradient(135deg,var(--accent),var(--accent-dark));}
+  .btn:hover{background:linear-gradient(135deg,var(--accent-dark),var(--accent-dark));}
+
+  /* modules ghost numbers */
+  .mod-card{position:relative;}
+  .mods-grid .mod-card::after{
+    position:absolute;top:6px;right:14px;z-index:2;
+    font-family:var(--serif);font-weight:700;font-size:64px;line-height:1;
+    color:rgba(255,255,255,.85);text-shadow:0 2px 16px rgba(26,16,13,.35);
+    pointer-events:none;
+  }
+  .mods-grid .mod-card:nth-child(1)::after{content:"1";}
+  .mods-grid .mod-card:nth-child(2)::after{content:"2";}
+  .mods-grid .mod-card:nth-child(3)::after{content:"3";}
+  .mods-grid .mod-card:nth-child(4)::after{content:"4";}
+  .mods-grid .mod-card:nth-child(5)::after{content:"5";}
+  .mods-grid .mod-card:nth-child(6)::after{content:"6";}
+
+  /* drama receipts: receipt look */
+  .receipts li{
+    font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+    font-size:14.5px;border-style:dashed;border-radius:10px;
+  }
+
+  /* photo offset frames */
+  .instructor-photo img,.empower-grid img,.edges-visual{position:relative;}
+  .instructor-photo,.empower-grid > img,.edges-visual{filter:none;}
+  .instructor-photo{position:relative;}
+  .instructor-photo::after,.empower-frame::after{
+    content:"";position:absolute;inset:18px -14px -14px 18px;
+    border-radius:24px;background:var(--accent-soft);z-index:-1;
+  }
+  .instructor-photo,.empower-frame{z-index:1;}
+  .empower-frame{position:relative;display:block;}
+  .empower-frame img{position:relative;}
+
+  /* testimonials big quotes */
+  .testi-card{position:relative;}
+  .testi-card::before{
+    content:"\201C";position:absolute;top:2px;right:18px;
+    font-family:var(--serif);font-size:84px;line-height:1;color:var(--accent-soft);
+    pointer-events:none;
+  }
+  .stars{position:relative;z-index:1;}
+
+  /* styles gallery hover zoom */
+  .style-tile{cursor:default;}
+  .style-tile img{transition:transform .45s ease;}
+  .style-tile:hover img{transform:scale(1.07);}
+  .j-card .ph, .j-card img{transition:transform .35s ease;}
+
+  /* journey arrows */
+  .journey{position:relative;}
+  .j-card{position:relative;}
+  @media (min-width:601px){
+    .j-card:not(:last-child)::after{
+      content:"→";position:absolute;right:-14px;top:42%;
+      font-size:22px;color:var(--accent);font-weight:700;z-index:2;
+    }
+  }
+
+  /* sticky bar save pill */
+  .sticky .save-mini{
+    background:rgba(196,113,74,.25);color:#E8B48D;
+    font-size:11px;font-weight:800;letter-spacing:.06em;
+    padding:4px 10px;border-radius:999px;margin-left:10px;vertical-align:2px;
+  }
+
+  /* final dark glow */
+  .finalcta{position:relative;overflow:hidden;}
+  .finalcta::before{
+    content:"";position:absolute;left:50%;top:-200px;transform:translateX(-50%);
+    width:900px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(196,113,74,.16),transparent 65%);pointer-events:none;
+  }
+  .finalcta .inner{position:relative;z-index:1;}
+
+  /* footer upgrade */
+  .footer{padding:46px 0 96px;}
+  .footer-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start;margin-bottom:26px;}
+  .footer .f-brand{font-weight:800;letter-spacing:.28em;color:#E8D9C9;font-size:16px;display:block;margin-bottom:8px;}
+  .footer .f-tag{font-size:13.5px;color:#9C8B7C;max-width:300px;}
+  .footer .f-links{display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#7E6F60;}
+
+
+  /* ================== POLISH LAYER 2 ================== */
+  .marquee{
+    background:var(--ink);color:#E8D9C9;overflow:hidden;white-space:nowrap;
+    padding:13px 0;border-top:1px solid rgba(255,255,255,.06);
+  }
+  .marquee-in{display:inline-block;animation:mq 28s linear infinite;}
+  .marquee span{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin:0 26px;}
+  .marquee b{color:#D98F63;font-weight:700;}
+  @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){ .marquee-in{animation:none;} }
+
+  .t-prog{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.18);}
+  .t-prog::after{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);animation:tprog 12s linear infinite;}
+  @keyframes tprog{0%{width:0}100%{width:100%}}
+  @media (prefers-reduced-motion: reduce){ .t-prog::after{animation:none;width:34%;} }
+
+  .yt-col.good{position:relative;transform:scale(1.03);box-shadow:0 26px 70px rgba(26,16,13,.28);z-index:1;}
+  .cmp-badge{
+    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--accent);color:#fff;font-size:11px;font-weight:800;
+    letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:999px;
+    white-space:nowrap;box-shadow:0 6px 18px rgba(196,113,74,.4);
+  }
+  @media (max-width:880px){ .yt-col.good{transform:none;} }
+
+  .fee-tag{
+    display:inline-block;background:rgba(196,113,74,.16);color:#E8B48D;
+    font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    padding:6px 14px;border-radius:999px;margin:0 auto 14px;
+  }
+  .fee-row b{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:14px;}
+
+  .btn .arr{display:inline-block;transition:transform .22s ease;margin-left:6px;}
+  .btn:hover .arr{transform:translateX(5px);}
+
+  .timeline{position:relative;}
+  @media (min-width:881px){
+    .timeline::before{
+      content:"";position:absolute;left:6%;right:6%;top:-14px;height:2px;
+      background:linear-gradient(90deg,transparent,var(--accent) 15%,var(--accent) 85%,transparent);opacity:.35;
+    }
+    .tl-step::before{
+      content:"";position:absolute;top:-19px;left:50%;transform:translateX(-50%);
+      width:12px;height:12px;border-radius:50%;background:var(--accent);
+      box-shadow:0 0 0 4px var(--cream);
+    }
+    .tl-step{position:relative;margin-top:16px;}
+  }
+
+  .j-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 10px 0;box-shadow:var(--shadow);transition:transform .3s ease;}
+  .j-card img,.j-card .ph{border-radius:8px !important;}
+  .j-card:nth-child(1){transform:rotate(-1.6deg);}
+  .j-card:nth-child(2){transform:rotate(1.1deg);}
+  .j-card:nth-child(3){transform:rotate(-0.8deg);}
+  .j-card:hover{transform:rotate(0) translateY(-4px);}
+  .j-cap{padding:10px 4px 12px;margin-top:0;}
+
+  .proof-avs{display:inline-flex;margin-right:12px;vertical-align:middle;}
+  .proof-avs img{
+    width:34px;height:34px;border-radius:50%;object-fit:cover;
+    border:2px solid #fff;margin-right:-10px;box-shadow:0 2px 8px rgba(26,16,13,.15);
+  }
+  .proof-avs img:last-child{margin-right:0;}
+
+  .guarantee{border:1.5px dashed var(--accent);background:linear-gradient(180deg,#FFFDFA,var(--accent-soft));}
+
+  .math{position:relative;overflow:hidden;}
+  .math::before{
+    content:"";position:absolute;left:50%;top:-220px;transform:translateX(-50%);
+    width:880px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(196,113,74,.13),transparent 65%);pointer-events:none;
+  }
+  .math .inner{position:relative;z-index:1;}
+  .drama{position:relative;overflow:hidden;}
+  .drama::after{
+    content:"";position:absolute;right:-160px;bottom:-160px;width:440px;height:440px;border-radius:50%;
+    border:1.5px solid rgba(217,143,99,.15);pointer-events:none;
+  }
+
+  .faq-list details[open]{border-color:var(--accent);box-shadow:0 14px 36px rgba(196,113,74,.12);}
+  .faq-list details[open] summary{color:var(--accent-dark);}
+
+  /* ---------- drama ---------- */
+  .drama{background:var(--ink);color:#EFE6DC;padding:88px 0;}
+  .drama .eyebrow{color:#D98F63;}
+  .drama h2{color:#fff;max-width:760px;margin:0 auto;}
+  .receipts{max-width:560px;margin:42px auto 34px;list-style:none;}
+  .receipts li{
+    background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);
+    border-radius:14px;padding:15px 20px;margin-bottom:10px;
+    font-size:16px;color:#DCCDBD;
+  }
+  .receipts li b{color:#fff;}
+  .drama .punch{max-width:640px;margin:0 auto;text-align:center;font-size:18.5px;color:#C8B8AA;}
+  .drama .punch b{color:#E8B48D;}
+
+  /* ---------- can-i-do-it / timeline ---------- */
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:920px;margin:44px auto 0;}
+  .tl-step{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 24px;}
+  .tl-when{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:8px;}
+  .tl-step p{font-size:15px;color:var(--ink-soft);}
+  .tl-note{text-align:center;font-size:14px;color:var(--muted);margin-top:14px;}
+  .tools-note{
+    max-width:640px;margin:32px auto 0;text-align:center;
+    background:var(--accent-soft);border:1px solid #E8CDBA;border-radius:14px;
+    padding:16px 22px;font-size:15.5px;color:var(--accent-dark);font-weight:600;
+  }
+
+  /* ---------- empowerment ---------- */
+  .empower{text-align:center;padding:88px 0;}
+  .empower h2{max-width:680px;margin:0 auto 22px;}
+  .empower p{max-width:620px;margin:0 auto;font-size:17.5px;color:var(--ink-soft);line-height:1.75;}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:880px){
+    .grid3{grid-template-columns:1fr 1fr;}
+    .timeline{grid-template-columns:1fr;max-width:420px;}
+    .yt-grid{grid-template-columns:1fr;}
+    .statrow{grid-template-columns:1fr;max-width:420px;}
+    .imagine-list{grid-template-columns:1fr;}
+    .edges-grid{grid-template-columns:1fr;gap:30px;}
+    .chips{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:600px){
+    .sect{padding:60px 0;}
+    .grid3{grid-template-columns:1fr;}
+    .styles-gallery{grid-template-columns:repeat(3,1fr);}
+    .bonus-card{grid-template-columns:1fr;gap:14px;}
+    .guarantee{grid-template-columns:1fr;text-align:center;}
+    .g-seal{margin:0 auto;}
+    .cine-wrap{height:70vh;min-height:420px;}
+    .hero{padding:56px 18px 56px;}
+    
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"The Watch-Me Video Method","description":"13 filmed videos teaching you to braid your own hair at home — knotless, boho, cornrows, box braids. Includes the 47-page Hair Braiding Training Manual and 3 bonus guides.","brand":{"@type":"Brand","name":"Kastrit"},"offers":{"@type":"Offer","price":"39.99","priceCurrency":"USD","availability":"https://schema.org/InStock"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this really beginner friendly?","acceptedAnswer":{"@type":"Answer","text":"Yes. The course was filmed for people with little to no braiding experience — every technique shown on screen, full speed first, then slowed down."}},
+{"@type":"Question","name":"Will this work on my hair type, including 4C?","acceptedAnswer":{"@type":"Answer","text":"Yes. Module 1 is filmed across different textures, from looser curls to 4C, and shows how sectioning, moisture and tension change for each."}},
+{"@type":"Question","name":"What do I need to buy to get started?","acceptedAnswer":{"@type":"Answer","text":"A rat-tail comb, sectioning clips, an edge brush and practice hair — under $25 all in."}},
+{"@type":"Question","name":"How do I access the course after buying?","acceptedAnswer":{"@type":"Answer","text":"Right after checkout you receive an email with your personal access link. The course opens in any browser, no app to install."}}
+]}
+</script>
+
+<style>
+/* CheckoutChamp build: no custom JS -> static equivalents */
+.reveal{opacity:1 !important;transform:none !important;}
+img.parallax{transform:none !important;}
+.sticky{transform:translateY(0) !important;opacity:1 !important;visibility:visible !important;}
+html{scroll-behavior:smooth;}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="announce">Launch week · <b>Save 55%</b> — price rises to $59 with the next module drop</div>
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="#" action="none"><span class="logo-mark">K</span>KASTRIT</a>
+    <a class="btn" href="#buy" action="none">Get Instant Access</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+ <div class="inner">
+  <div class="hero-grid">
+   <div class="hero-copy">
+  <p class="eyebrow reveal">The Watch-Me Video Method</p>
+  <h1 class="display reveal" style="--d:.05s">Stop Paying <em>$250</em> Every Time You Get Your Braids Done</h1>
+  <p class="lede reveal" style="--d:.1s">Watch every braid being done — knotless, boho, cornrows, box braids — step by step, then do it yourself at home and keep thousands of dollars in your pocket every year.</p>
+  <div class="deny reveal" style="--d:.15s">
+    <p>You don't need another salon appointment.</p>
+    <p>You don't need to sit in a chair for 5 hours.</p>
+    <p>And you definitely don't need to keep paying $200–$250 every few weeks just to maintain a style you could learn yourself.</p>
+  </div>
+  <p class="truth reveal" style="--d:.2s">The truth is… most women spend thousands of dollars every year on braids. <b>Not because braids are difficult — because nobody ever showed them how to do them properly.</b></p>
+   </div>
+   <div class="hero-side">
+  <div class="buybox reveal" id="buy" style="--d:.25s">
+    <div class="buycard">
+      <div class="buycard__media">
+        <img loading="lazy" decoding="async" src="img/k01.jpg" alt="Watch-Me Video Method — complete bundle: video course, manual and bonuses">
+      </div>
+      <div class="spec-strip">13 videos · 2h 41m · 47-page manual · Lifetime access · Any device</div>
+      <div class="buycard__body">
+        <h3 class="offer-title">Everything you get today</h3>
+        <ul class="offer-list">
+          <li><span>The Watch-Me Video Method — 13 videos (2h 41m), every braid filmed</span><b>$89.00</b></li>
+          <li><span>Hair Braiding Training Manual — 47 pages, instant PDF</span><b>$9.99</b></li>
+          <li><span>Styles Library + Edge Protection + Maintenance guides</span><b>Free</b></li>
+          <li><span>Lifetime access — pause, rewind, rewatch forever</span><b>Free</b></li>
+        </ul>
+        <div class="offer-total"><span>Total value</span><b>$98.99</b></div>
+        <div class="buycard__price">
+          <span class="buycard__was">$89.00</span>
+          <span class="buycard__now">$39.99</span>
+          <span class="buycard__save">SAVE 55%</span>
+        </div>
+        <div class="buycard__tag">Launch price · Rises to $59 with the next module drop</div>
+        <a class="btn lg" href="#" id="ctaBuyMain" action="route">Get Instant Access<span class="arr">→</span></a>
+        <p class="buycard__lock"><svg class="ic-inline" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Secure checkout · Instant access · 30-day money-back guarantee</p>
+        <p class="pay-row">Visa · Mastercard · Amex · PayPal</p>
+      </div>
+    </div>
+  </div>
+   </div><!--/hero-side-->
+  </div><!--/hero-grid-->
+
+  <div class="chips reveal" style="--d:.3s">
+    <div class="chip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M7 5v14M17 5v14M2.5 9.5H7M2.5 14.5H7M17 9.5h4.5M17 14.5h4.5"/></svg><b>13 Video Modules</b></div>
+    <div class="chip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 14H11l-1 8 8.5-12H12z"/></svg><b>Instant Access</b></div>
+    <div class="chip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.8-6.3"/><path d="M3.5 4.5v5h5"/></svg><b>Watch Unlimited</b></div>
+    <div class="chip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.4"/><path d="M11 18.5h2"/></svg><b>Any Device</b></div>
+  </div>
+  <p class="proof-bar reveal"><span class="proof-avs"><img src="data:image/jpeg;base64,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" alt=""><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAB4AHgDASIAAhEBAxEB/8QAHAAAAAcBAQAAAAAAAAAAAAAAAAIDBAUGBwgB/8QANhAAAgEDAwIEBQMCBQUAAAAAAQIDAAQRBQYhEjEHE0FRFCJhgZEIMnEjoRVygrHRUlNiweH/xAAZAQADAQEBAAAAAAAAAAAAAAACAwQBBQD/xAAnEQACAgEDAgcAAwAAAAAAAAAAAQIRAwQSITEyBRMiI0FRcTNhgf/aAAwDAQACEQMRAD8A2dI8U4RKMkdLolctItbCqtKBaOFowWjSAbCAUbFKBa9xRJA2J9NeYpXivDgDJOK2jLE+mvCKbPrGmRlOrULVfMfykzKvzP8A9I55P0p5wexzWUbbEitEKml+milayjdw1YUg609ZfpSTpQsOyPdMmhTh05oUFBWPVSllWgq0qopyQlsKFo4WjYr3GBk8UxIGxpqF/aaVYS3l7OkFvEOp5HOAornHf3j/AKpfXbWm2JPgLeGUg3OAzTAcDAIOB6/ivPHnxLl1HVZdt6ZMUs7Y9M7JIGWckA+noO381iLZJVRgsfam44buWLnKuEWyDxK3ZDci5XcOoGUEt0tIWUk9+Dx/bipjcfi7u/cmi21tJdGCGEf1JLYFHkPuxHbj2+tU3RbSO91ONX+ZM8g1ue2NtWdxAIzbxdJHbppOfNDFJR22yjT6aWaLk5UjAlupz0sszEhiwUk9/erzs7xS3Btu9DR38lzBIyvcJO5fqwOcE9jzjP0HtTnxR2Cu27mPVLBemB2xIgHCn3H0rOlfpmV+AH+v2qiLjmjZPOEsMqZ21szeenby0lbm0lXz1UedEO6H/irGVrjzw13c+0t2287ErASBKCwHUntn75+1dhwyJcQJLGcq4yKQ406DTtWEK0my05IpNloGgkxm6c0KWdaFAMsdKKOBXiijgU5ISwAVF7n1UaJtfUNR6lVreFmTq7FsfKPucVLVE7lsmvNFlChWaP51V1LKT65A5PGeK2XEXR6PLVnC+u3cl9q9zczSCWWaQyOwGMseT/emA/emcD+afarZyQOlw0Txx3BZ0JQhSAccH1pmQPMyTgBefxVUK2qiefc7LHtOKVrrqhgjlkB4DP05P0rYdqa/NFfNZT2pgu4l6vLzngd/7g1nmxNE0vVXD36FSvKlSMH+Qc1edHv7CbesZgliDRI1srllUH3H5J5/muPqZRlN/aO9pYSjBJ9GSGta/ablsr2yv7uzik6SqRY+Yn65Nc/alZmxv5bdwOtG5P0IyP8AeumIztyw10JcQBHuSf6y4eORh3Hfg/SsP8T7aCw3pNDb8wzRCTj/ADH/AIH4p2jyeuvsn1uP2930yv2JYyQSCPzCG6QpPLV2T4aNcNsy2FzCsRYeaoQALhh1cfcn7njjFcg7X06fWNSGn2lu013MCbaMerjn1+gNdj+HcFxBsPTUvZDJdJGY3YgAjpYgDgnsABn6VTk70QQ7LLIRSbClSKKRWNGjZhQo7DmhSmg0xcUcUQdqOKahbDAUnPG0sLIr9BbjOKU9KFH1MORfFLY15ot9qN3fTJ/SZI7bLZaVMnDMcctgc1lcit1FDkEHGD3rtzxI2Lab00JkmeZJ7dG8oxgNycZJUjkgdsYrlXU9malo15L5y+fbQPM0jRLnAUYy5GCFPbBxxk+tZjns9LPTjv8AUhptu5miuFiilCsylAM8Fse9WvZm311LUluJWsYZo2JZZSxPbOeO+TxVCnaO1eNbeRJHt1CySRnKs/0Prjtnscfc2TbOt6O96j6lHKJO2VYgN+KTmg0nJIu0+ROoyfQ17dNi9wkAju7eW3tnV3EaY9McGsQ3bcf45u6ZLfDR28YjV+SCBySfuT/atmie01/To9K02aLSFuiI1ublunLHsBnuSeKr2ieEW54tT03UdT0vy7SDoRjE/mSyqMDsgbIOfUcAfmfT8N5BmsdpYyJ8JtBudU1bTL6zSSOTTrpfMljH7lJwwz2GAc/XJrrRI0iQKihVHtVe2Vs+12loz20SqJLiVriYLkqGY5wCeSB7n/5Vjq1Lm2c9v4QU0RqUNENeZ5CLd6FenvQpZoopo4NIK1Kg/WtTMYoDUDu/emjbI0j/ABDWLgort0RxIMySn/xH07k+n4qalmjt4HmlcJHGpdmPZQBkk1xP4k71uN7b2vNRdz8KjeVbR9RISMcDHPr3OPU06K3C5PaaLuX9SmtXYkh0LTodPjP7ZZf6kmMe3YGsdvtb1HVtT+L1a7mvWaRpGEj5GW/cQOwzx29hTEODjjntQOCKeooVud2SOgaNNqbypEOroAYj6GtE0DZ6RQCWS2JeM5/bUT4WX+mW24Wtb8Y+NjEcTEcBgc4Ptmt2t7aC3iKwYANcnWTmp7fg7WijDy1L5KBrljdNt+aSxBhmtALiJwOQ6HqGB78U62h+pC4gC2+6LETx+lzbDpYD6r2OPpVymSN0IOD7+mawHxD0GLQt1yJbQiKyvE86EDIVW7Oo+/OPTqFZopK3jZmvg6WRHVm1fEfbG8nEOkair3PR1m3kUpIB/B7/AGNWY1wLZ3tzp1/FdWk8lvPEepJI2Ksp+hFdheE++W31sqO6uSP8RtG+HusYHUwGQ4A7Bh/HIbHAroyjtOXGVl3JojGvSaTY0lsYgrHmhRWPNCl2FR4rUqrUySSl0fihTDkij+N25H274X3zQSqlzekWseWw2G/cR9QM1xwDXRf6lfjLtdDso5VW1/qSspAyXGAD79iawYbf1Fl6ooPNHp0HJP271ZjnFLlk08c5cpEd1dJzXqNkHPvRrq0uLVmWeGSFhxhlIpCLLMF9ziqE7ENNdSQQugjKlkZcHIPIPoRVlk8Tt1JZra/GrH0Dp81Yx1nHrmq2zZzznFWDTdtrqmizXaMHcAAYmUdDZb5Sp5JKr8oypPPcA0uUYy7lY2Epx7HQe337uWWP59ZuDj+P+KZ6tq1/rYhfU7iS4MJbyy2Plzj2/gVBxoYpsrwPUU9HVLhUBYnAAHNZ5cU7SPeZOSptiEy/OHHIPtWu/pu142W9bvSGZvL1KAkKBx1plgT/AKer81k7qVUAgjIxV48HtC1Mb80bU/ntrVbgDzP+7yQVHuDyDXsjSjyz2OLcuEddMaSZq9ZqTdqibKEjxmoUizUKAbQ1jkp0klREc3NO45aVGQbRj/6hJCNQ0P28uX/daoehdL9BFXT9QbN8VokmD0hJFz6ZytZ/oUpUoQeKLIrhZTpnTond7PFHtC4641dunClhnB96xyFul+o+labvyd227j0JGay8E1ToFWN/pJ4k/dS/ontv6lDp24bG9uIxJDDMryIVDZXPIwe/FXG73RoGpRWtt0GyjjMMDlYeJY0DAu+Dzkn9o9+/FZorkUp15q5qzmqTRMav8IphW1uYZ0iLIWSIxs4B4Zuec0ppGvz6LKJLJ4weoP8AMgbDAEA8/wCY/moLpU+tehVHavUZfNkxdajPfOGnlMhHrgDv/FaT4Wa1JFbojqz/AAN0joSeMMf2j7gn/VWQhyBgVquzrZtM2nFI/LzyfEEew4wPwAfvUespY/8AS/QpyyOvo6iZ6SZ6bWtz8TYQTngyxq/5Ga8kk+tTth0GeT80KatJzQoNwVEVDNzT+OQnFChU0RkjL/H/ACdq6Y+M9N0ef9JrItBnJZeaFCreuI3C/cJbd2JdsSse45rL6FCnaHsf6K8S/kX4e5pUfMBQoVectg6XFefPQoV4wVtQJLqON+FJ5rXbC787SljGBhewoUK5muXQ7PhnSRvug3aXm27CeM5VoFx9hj/1TmR+KFCkMF9WNZJKFChS2zT/2Q==" alt=""><img src="data:image/jpeg;base64,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" alt=""></span><span class="st">★★★★★</span>&nbsp; "I was paying around $240 every appointment. After following along with the videos, I started doing simple styles myself." — <b>Tanya M. · Verified buyer</b></p>
+ </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-in">
+    <span>Knotless</span><b>·</b><span>Boho braids</span><b>·</b><span>Cornrows</span><b>·</b><span>Goddess</span><b>·</b><span>Box braids</span><b>·</b><span>13 filmed videos</span><b>·</b><span>Your tension, your rules</span><b>·</b><span>Knotless</span><b>·</b><span>Boho braids</span><b>·</b><span>Cornrows</span><b>·</b><span>Goddess</span><b>·</b><span>Box braids</span><b>·</b><span>13 filmed videos</span><b>·</b><span>Your tension, your rules</span><b>·</b>
+  </div>
+</div>
+
+<!-- ================= INSTRUCTOR ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="instructor-grid">
+      <div class="instructor-photo reveal">
+        <img src="img/k02.jpg" alt="Maya, your braiding instructor" style="width:100%;display:block;border-radius:24px;object-fit:cover;aspect-ratio:4/5;">
+      </div>
+      <div class="instructor-copy">
+        <p class="eyebrow reveal">Meet the hands you'll be watching</p>
+        <h2 class="reveal" style="--d:.05s">Hi — I'm Maya. I've been braiding for 12 years.</h2>
+        <p class="reveal" style="--d:.1s">For most of those years, women sat in my chair for five, six hours — and paid me $250 every time. And here's what I learned: <b>they didn't need me. They needed someone to finally show them.</b></p>
+        <p class="reveal" style="--d:.15s">So I set up a camera behind my shoulder and filmed everything I do — every part, every section, every bit of tension — exactly the way I'd teach my own sister. No fancy editing. Just my hands, real hair, and the method I've refined over a thousand installs.</p>
+        <p class="sign reveal" style="--d:.2s">— Maya, your instructor</p>
+        <div class="inst-chips reveal" style="--d:.25s">
+          <span>12 years braiding</span>
+          <span>1,000+ installs</span>
+          <span>Filmed in real time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRAILER ================= -->
+<!-- Quando avete il trailer vero: sostituire il div.trailer con <video controls playsinline poster="..."> -->
+<section class="sect" style="padding-bottom:66px;">
+  <div class="inner">
+    <div class="sect-head" style="margin-bottom:34px;">
+      <p class="eyebrow reveal">Watch a preview</p>
+      <h2 class="reveal" style="--d:.05s">This Is What "Watch-Me" Looks Like.</h2>
+    </div>
+    <div class="trailer-wrap reveal">
+      <div class="trailer">
+        <img src="img/k03.jpg" alt="Over-the-shoulder braiding close-up">
+        <img src="img/k04.jpg" alt="Clean parting close-up">
+        <img src="img/k05.jpg" alt="Finished knotless braids">
+        <div class="t-shade"></div>
+        <span class="t-tag">Preview · Module 3</span>
+        <span class="t-play"></span>
+        <span class="t-cap">Real hands, real hair — filmed over the shoulder, full speed and slowed down.</span>
+        <div class="t-prog"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="sect tint" style="padding-top:66px;padding-bottom:66px;">
+  <div class="inner">
+    <div class="sect-head" style="margin-bottom:38px;">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="reveal" style="--d:.05s">Braiding Along Tonight, In Three Steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-thumb"><img src="img/k06.jpg" alt="Get instant access"></div>
+        <div class="step-body">
+          <span class="step-num">1</span>
+          <h3>Get instant access</h3>
+          <p>Checkout takes two minutes. The course, the manual and every bonus unlock immediately — on any device.</p>
+        </div>
+      </div>
+      <div class="step reveal" style="--d:.06s">
+        <div class="step-thumb"><img src="img/k07.jpg" alt="Watch Module 1 tonight"></div>
+        <div class="step-body">
+          <span class="step-num">2</span>
+          <h3>Watch Module 1 tonight</h3>
+          <p>Filmed over the shoulder: hands, sectioning, tension. Full speed first, then slowed down.</p>
+        </div>
+      </div>
+      <div class="step reveal" style="--d:.12s">
+        <div class="step-thumb"><img src="img/k08.jpg" alt="Braid along by the weekend"></div>
+        <div class="step-body">
+          <span class="step-num">3</span>
+          <h3>Braid along by the weekend</h3>
+          <p>Prop your phone by the mirror, open the practice-along module, and do your first real braid with the video.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CINE BANNER 1 ================= -->
+<section class="cine-wrap">
+  <img class="parallax" data-parallax="0.18" loading="lazy" decoding="async" src="img/k09.jpg" alt="Hair braiding salon">
+  <div class="cine-shade"></div>
+  <div class="cine-copy">
+    <p class="q reveal">One salon visit costs more than this entire course will ever cost.</p>
+  </div>
+</section>
+
+<!-- ================= DARK MATH ================= -->
+<section class="math">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">How much are salon visits really costing you?</p>
+      <h2 class="reveal" style="--d:.05s">Let's do the math.</h2>
+    </div>
+    <p class="body reveal" style="--d:.1s">$250 every 6 weeks is over $2,000 per year — and the install price is never the whole bill. Here's what one appointment actually looks like:</p>
+    <div style="text-align:center;"><span class="fee-tag reveal">The real bill · one appointment</span></div>
+    <div class="fee-stack reveal" style="--d:.15s">
+      <div class="fee-row"><span>Knotless install (medium, shoulder length)</span><b>$180–$300</b></div>
+      <div class="fee-row"><span>Braiding hair (4–8 packs)</span><b>$40–$120</b></div>
+      <div class="fee-row"><span>Take-down of your old style</span><b>$25–$75</b></div>
+      <div class="fee-row"><span>Pre-wash & blow-dry</span><b>$25–$50</b></div>
+      <div class="fee-row"><span>Tip (15–20%)</span><b>$30–$60</b></div>
+      <div class="fee-row total"><span>One appointment, all in</span><b>$300–$600+</b></div>
+    </div>
+    <div class="statrow">
+      <div class="s reveal"><span class="big">$250+</span><span class="lbl">per salon visit — before extras</span></div>
+      <div class="s reveal" style="--d:.08s"><span class="big">$2,000+</span><span class="lbl">spent per year, every year</span></div>
+      <div class="s accent reveal" style="--d:.16s"><span class="big">$39.99</span><span class="lbl">this entire course — once</span></div>
+    </div>
+    <p class="payoff reveal">That's less than most salon tips. If this course helps you replace <b>just one appointment</b>, it pays for itself six times over. Replace them all, and you keep <b>$2,000+ every year — for life</b>.</p>
+    <div class="center reveal"><a class="btn lg ondark" href="#buy" action="none">Get Instant Access<span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- ================= YT OBJECTION ================= -->
+<section class="sect">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">Salon, YouTube, or a method</p>
+      <h2 class="reveal" style="--d:.05s">Three Ways To Get Your Braids Done. Only One You Own.</h2>
+    </div>
+    <div class="yt-grid">
+      <div class="yt-col bad reveal">
+        <h3>The Salon</h3>
+        <span class="cmp-price">$250+</span>
+        <span class="cmp-sub">every visit, forever</span>
+        <ul>
+          <li>Deposits, waiting lists, their rules</li>
+          <li>4–6 hours in someone else's chair</li>
+          <li>Someone else controls your tension</li>
+          <li>You never learn a thing — so you keep coming back</li>
+        </ul>
+      </div>
+      <div class="yt-col bad reveal" style="--d:.05s">
+        <h3>Free Tutorials</h3>
+        <span class="cmp-price">$0</span>
+        <span class="cmp-sub">but you stay stuck</span>
+        <ul>
+          <li>10,000 clips, no order, no plan</li>
+          <li>Every creator, a different technique</li>
+          <li>Filmed to go viral, not to teach — key steps skipped</li>
+          <li>Most women give up in under an hour</li>
+        </ul>
+      </div>
+      <div class="yt-col good reveal" style="--d:.1s">
+        <span class="cmp-badge">The one you own</span>
+        <h3>The Watch-Me Method</h3>
+        <span class="cmp-price">$39.99</span>
+        <span class="cmp-sub">once. yours forever</span>
+        <ul>
+          <li>13 videos in the exact order you should learn</li>
+          <li>Tension, sectioning and hand position shown on camera</li>
+          <li>Practice-along module — your hands learn, not just your eyes</li>
+          <li>Pause, rewind, repeat until it clicks. Forever.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="yt-kicker reveal">The salon costs you money forever. Free tutorials cost you months of frustration. A method gets you braiding — once, and it's yours.</p>
+  </div>
+</section>
+
+<!-- ================= PAINS ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">Why more women are learning to braid their own hair</p>
+      <h2 class="reveal" style="--d:.05s">Because they're tired of…</h2>
+    </div>
+    <div class="grid3" style="grid-template-columns:1fr 1fr;max-width:880px;margin:0 auto;">
+      <div class="pain-card reveal">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5v19"/><path d="M16.5 6.5H10a2.7 2.7 0 0 0 0 5.4h4a2.7 2.7 0 0 1 0 5.4H7"/></svg>
+        <h3>Spending Hundreds Every Month</h3>
+        <p>The costs never stop. Every install. Every refresh. Every touch-up. And prices go up every single year.</p>
+      </div>
+      <div class="pain-card reveal" style="--d:.06s">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="M10 13.5l4 4M14 13.5l-4 4"/></svg>
+        <h3>Deposits, Rules & No-Shows</h3>
+        <p>$100 deposits you never see again. Cancelled appointments. "Come washed and blow-dried." Late fees by the minute.</p>
+      </div>
+      <div class="pain-card reveal" style="--d:.12s">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+        <h3>Sitting For 4–6 Hours</h3>
+        <p>Half a day disappears every time you get a new style — plus travel, plus waiting for your braider to be free.</p>
+      </div>
+      <div class="pain-card reveal" style="--d:.18s">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 2.5 20.5h19z"/><path d="M12 10v4.5"/><path d="M12 17.6h.01"/></svg>
+        <h3>Braids That Are Too Tight</h3>
+        <p>Pain. Tension. Edges suffering. Headaches that last for days. And you're supposed to just sit there and take it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BRAIDER DRAMA ================= -->
+<section class="drama">
+  <div class="inner">
+    <div class="sect-head" style="margin-bottom:0;">
+      <p class="eyebrow reveal">Let's talk about how it really goes</p>
+      <h2 class="reveal" style="--d:.05s">You're Not Just Paying For Braids. You're Paying For Permission.</h2>
+    </div>
+    <ul class="receipts">
+      <li class="reveal"><b>$100 deposit.</b> Non-refundable — obviously.</li>
+      <li class="reveal" style="--d:.05s"><b>"Come washed and blow-dried."</b> There goes your Saturday morning.</li>
+      <li class="reveal" style="--d:.1s"><b>She's running late.</b> You wait. You don't complain — you need her.</li>
+      <li class="reveal" style="--d:.15s"><b>Appointment moved. Twice.</b> And your event is Friday.</li>
+      <li class="reveal" style="--d:.2s"><b>One loose braid a week later?</b> That's a new booking. And a new bill.</li>
+    </ul>
+    <p class="punch reveal">None of this makes you "difficult". It makes you <b>dependent on a system where you hold none of the cards</b>. Learning to braid your own hair is how you take the deck back.</p>
+  </div>
+</section>
+
+<!-- ================= MODULES ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">What's inside</p>
+      <h2 class="reveal" style="--d:.05s">13 Videos. Every Braid, Filmed.</h2>
+      <p class="lede reveal" style="--d:.1s">Six parts, thirteen filmed videos — 2h 41m of over-the-shoulder footage. Watch every technique done on screen, then pause, rewind and repeat until it clicks.</p>
+    </div>
+    
+    <div class="player-mock reveal">
+      <div class="pm-top"><span class="pm-dot"></span><span class="pm-dot"></span><span class="pm-dot"></span>&nbsp; Kastrit — Members Area</div>
+      <div class="pm-video"><img class="pm-still" src="img/k10.jpg" alt="Stitch braids being installed — course footage"><span class="pm-play"></span><span>Part 04 · Step-By-Step, Start To Finish</span></div>
+      <div class="pm-list">
+        <div class="pm-row"><span><b>01 · Understanding Hair Types</b></span><span class="pm-dur">2 videos · 18 min</span></div>
+        <div class="pm-row"><span><b>02 · Essential Braiding Tools</b></span><span class="pm-dur">2 videos · 15 min</span></div>
+        <div class="pm-row"><span><b>03 · Core Braiding Techniques</b></span><span class="pm-dur">3 videos · 42 min</span></div>
+        <div class="pm-row active"><span><b>▶ 04 · Step-By-Step, Start To Finish</b></span><span class="pm-dur">2 videos · 38 min</span></div>
+        <div class="pm-row"><span><b>05 · Hair Care & Safe Tension</b></span><span class="pm-dur">2 videos · 22 min</span></div>
+        <div class="pm-row"><span><b>06 · Practice Along With Me</b></span><span class="pm-dur">2 videos · 26 min</span></div>
+      </div>
+    </div>
+    <div class="grid3 mods-grid">
+      <div class="mod-card reveal">
+        <div class="mod-thumb"><img src="img/k11.jpg" alt="Hands separating natural hair sections" loading="lazy"></div>
+        <div class="mod-body">
+          <span class="mod-num">Part 01 · 18 min</span>
+          <h3>Understanding Hair Types</h3>
+          <p>See how different textures behave on camera, and how to handle each one.</p>
+        </div>
+      </div>
+      <div class="mod-card reveal" style="--d:.06s">
+        <div class="mod-thumb"><img src="img/k12.jpg" alt="Braiding tools flat lay" loading="lazy"></div>
+        <div class="mod-body">
+          <span class="mod-num">Part 02 · 15 min</span>
+          <h3>Essential Braiding Tools</h3>
+          <p>Watch exactly what gets used, what gets skipped, and how each tool is held.</p>
+        </div>
+      </div>
+      <div class="mod-card reveal" style="--d:.12s">
+        <div class="mod-thumb"><img src="img/k13.jpg" alt="Fingers mid-braid close-up" loading="lazy"></div>
+        <div class="mod-body">
+          <span class="mod-num">Part 03 · 42 min</span>
+          <h3>Core Braiding Techniques</h3>
+          <p>The foundations, filmed close-up — real hands, real hair, full speed and slowed down.</p>
+        </div>
+      </div>
+      <div class="mod-card reveal" style="--d:.18s">
+        <div class="mod-thumb"><img src="img/k14.jpg" alt="Woman braiding her own hair at the mirror" loading="lazy"></div>
+        <div class="mod-body">
+          <span class="mod-num">Part 04 · 38 min</span>
+          <h3>Step-By-Step, Start To Finish</h3>
+          <p>Follow along from preparation to finished style, in real time.</p>
+        </div>
+      </div>
+      <div class="mod-card reveal" style="--d:.24s">
+        <div class="mod-thumb"><img src="img/k15.jpg" alt="Applying oil along scalp parts" loading="lazy"></div>
+        <div class="mod-body">
+          <span class="mod-num">Part 05 · 22 min</span>
+          <h3>Hair Care & Safe Tension</h3>
+          <p>Protect your natural hair while you style — shown, not just described.</p>
+        </div>
+      </div>
+      <div class="mod-card reveal" style="--d:.3s">
+        <div class="mod-thumb"><img src="img/k16.jpg" alt="Following the braiding video on a tablet" loading="lazy"></div>
+        <div class="mod-body">
+          <span class="mod-num">Part 06 · 26 min</span>
+          <h3>Practice Along With Me</h3>
+          <p>Braid alongside the video and build confidence far faster than watching alone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAN I DO THIS ================= -->
+<section class="sect">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">The question you're actually asking</p>
+      <h2 class="reveal" style="--d:.05s">"But Can I Really Do This Myself?"</h2>
+      <p class="lede reveal" style="--d:.1s">Let's be honest: self-braiding has a reputation. Tired arms, the back of your head, crooked sections. Here's how the method handles each one.</p>
+    </div>
+    <div class="grid3">
+      <div class="pain-card reveal">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 8-6-16-3 8H2"/></svg>
+        <h3>"My arms die after 20 minutes"</h3>
+        <p>True — at first. The method splits installs into sessions, shows you resting positions, and starts with styles that forgive. Nobody does six hours on day one.</p>
+      </div>
+      <div class="pain-card reveal" style="--d:.06s">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="9" rx="6" ry="7"/><path d="M12 16v5"/><path d="M8 21h8"/></svg>
+        <h3>"I can't see the back of my head"</h3>
+        <p>You don't need to. The two-mirror setup and touch-based sectioning are filmed from behind — you see exactly what your hands should feel.</p>
+      </div>
+      <div class="pain-card reveal" style="--d:.12s">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 15.5h7"/><path d="M9 9.5h.01M15 9.5h.01"/></svg>
+        <h3>"My first braids will be ugly"</h3>
+        <p>Yes. Everyone's are. That's what the practice-along module is for: your third attempt won't look anything like your first — and nobody has to see the first two.</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal"><span class="tl-when">After session one</span><p>Clean parts and your first real braid — done with your own hands.</p></div>
+      <div class="tl-step reveal" style="--d:.06s"><span class="tl-when">After week one</span><p>A simple full style you can actually wear out of the house.</p></div>
+      <div class="tl-step reveal" style="--d:.12s"><span class="tl-when">After month one</span><p>Refreshing sections and re-doing styles whenever you want.</p></div>
+    </div>
+    <p class="tl-note">Everyone's pace is different — the videos wait for you.</p>
+    <p class="tools-note reveal">Everything you need — comb, clips, edge brush, practice hair — costs less than one salon tip.</p>
+    <p class="tools-note reveal" style="background:var(--ink);border-color:var(--ink);color:#E8B48D;">And when friends start asking who did your hair — installs go for $150–$300. The skill pays both ways.</p>
+  </div>
+</section>
+
+<!-- ================= FOR YOU / NOT FOR YOU ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">Let's be upfront</p>
+      <h2 class="reveal" style="--d:.05s">This Is For You — Or It Isn't.</h2>
+    </div>
+    <div class="fy-grid">
+      <div class="yt-col good reveal">
+        <h3>This is for you if…</h3>
+        <ul>
+          <li>You're paying $200–$400+ every time you get braids installed</li>
+          <li>You want to control your own tension and protect your edges</li>
+          <li>You can give it 20 minutes an evening, phone propped by the mirror</li>
+          <li>You want a skill you'll keep — and maybe pass on to your daughter</li>
+        </ul>
+      </div>
+      <div class="yt-col bad reveal" style="--d:.08s">
+        <h3>It's NOT for you if…</h3>
+        <ul>
+          <li>You expect salon-perfect braids on your very first try</li>
+          <li>You want a magic gadget instead of a skill that takes practice</li>
+          <li>You're not willing to do ugly braid #1 to get to great braid #10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CINE BANNER 2 (BONUSES) ================= -->
+<section class="cine-wrap">
+  <img class="parallax" data-parallax="0.18" loading="lazy" decoding="async" src="img/k17.jpg" alt="Braiding bonuses — the full manual, styles library, tools, edge protection and maintenance guides">
+  <div class="cine-shade"></div>
+  <div class="cine-copy">
+    <p class="q reveal">Watch it done. Read it back. Keep it forever.</p>
+  </div>
+</section>
+
+<!-- ================= BONUSES ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">Included free</p>
+      <h2 class="reveal" style="--d:.05s">Your Bonuses With Every Purchase</h2>
+    </div>
+    <div class="bonus-list">
+      <div class="bonus-card featured has-thumb reveal">
+        <span class="bonus-badge">BONUS #1 · FREE</span>
+        <div>
+          <h3>The Complete Hair Braiding Training Manual</h3>
+          <p>The full 47-page written guide, yours free with the course. Watch it done, then read it back: every technique in the videos is broken down page by page, so you always have a refresher on any device.</p>
+          <div class="bonus-tags"><span>47 Pages</span><span>Instant PDF</span><span>Normally $9.99</span></div>
+        </div>
+        <img class="bonus-thumb" src="img/k18.jpg" alt="The 47-page Hair Braiding Training Manual">
+      </div>
+      <div class="bonus-card reveal" style="--d:.06s">
+        <span class="bonus-badge">BONUS #2</span>
+        <div>
+          <h3>Popular Braiding Styles Library</h3>
+          <p>Visual inspiration and style references so you know exactly which style you want before you start.</p>
+          <div class="styles-gallery">
+            <div class="style-tile"><img src="img/k19.jpg" alt="Knotless braids" loading="lazy"><span class="cap">Knotless</span></div>
+            <div class="style-tile"><img src="img/k20.jpg" alt="Boho braids" loading="lazy"><span class="cap">Boho</span></div>
+            <div class="style-tile"><img src="img/k21.jpg" alt="Goddess braids" loading="lazy"><span class="cap">Goddess</span></div>
+            <div class="style-tile"><img src="img/k22.jpg" alt="Cornrows braids" loading="lazy"><span class="cap">Cornrows</span></div>
+            <div class="style-tile"><img src="img/k23.jpg" alt="Box Braids braids" loading="lazy"><span class="cap">Box Braids</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bonus-card has-thumb reveal" style="--d:.12s">
+        <span class="bonus-badge">BONUS #3</span>
+        <div>
+          <h3>Edge Protection & Proper Tension Guide</h3>
+          <p>The biggest fear most beginners have: "What if I damage my hair?" This bonus shows you how to avoid excessive tension, reduce stress on your edges, and braid more comfortably.</p>
+        </div>
+        <img class="bonus-thumb" src="img/k24.jpg" alt="Edge protection">
+      </div>
+      <div class="bonus-card has-thumb reveal" style="--d:.18s">
+        <span class="bonus-badge">BONUS #4</span>
+        <div>
+          <h3>Braids Maintenance & Longevity Guide</h3>
+          <p>Simple habits that keep your braids looking fresh longer. The longer they last, the more money you save.</p>
+        </div>
+        <img class="bonus-thumb" src="img/k25.jpg" alt="Braids maintenance">
+      </div>
+    </div>
+    <div class="center" style="margin-top:44px;">
+      <a class="btn lg" href="#buy" action="none">Get Everything For $39.99<span class="arr">→</span></a>
+      <p class="tl-note" style="margin-top:12px;">Course + manual + all four bonuses · 30-day money-back guarantee</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDGES ================= -->
+<section class="sect">
+  <div class="inner">
+    <div class="edges-grid">
+      <div class="edges-visual reveal" style="padding:0;">
+        <img src="img/k26.jpg" alt="Healthy edges" loading="lazy" style="width:100%;display:block;border-radius:24px;object-fit:cover;aspect-ratio:9/10;">
+      </div>
+      <div class="edges-copy">
+        <p class="eyebrow reveal">Your edges are worth more than any style</p>
+        <h2 class="reveal" style="--d:.05s">The braids should never cost you your hairline.</h2>
+        <p class="reveal" style="--d:.1s">Hair loss from constant tension is one of the most common problems among women who wear braids — and it usually starts the same way: <b>a style that hurt for days, done by hands that weren't yours.</b></p>
+        <p class="reveal" style="--d:.15s">When you're the one braiding, you feel every section. You set the tension. You protect your edges — because they're <b>your</b> edges.</p>
+        <p class="reveal" style="--d:.2s">Module 5 and the Edge Protection bonus show you exactly how, on camera.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">What customers are saying</p>
+      <h2 class="reveal" style="--d:.05s">Real women. Real savings.</h2>
+    </div>
+    
+    <div class="grid3 reveal" style="max-width:860px;margin:0 auto 40px;">
+      <div class="pain-card" style="text-align:center;"><span style="font-size:34px;font-weight:800;display:block;">2,300+</span><p>women learning with the method</p></div>
+      <div class="pain-card" style="text-align:center;"><span style="font-size:34px;font-weight:800;display:block;color:#D99A3E;">4.8★</span><p>average customer rating</p></div>
+      <div class="pain-card" style="text-align:center;"><span style="font-size:34px;font-weight:800;display:block;">$600+</span><p>average saved in the first 3 months</p></div>
+    </div>
+    
+    <div class="journey">
+      <div class="j-card reveal"><img src="img/k27.jpg" alt="Day 1 — her first attempt" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:16px;aspect-ratio:3/4;display:block;"><p class="j-cap">Day 1 — her first attempt</p></div>
+      <div class="j-card reveal" style="--d:.06s"><img src="img/k28.jpg" alt="Week 2 — first full style" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:16px;aspect-ratio:3/4;display:block;"><p class="j-cap">Week 2 — first full style</p></div>
+      <div class="j-card reveal" style="--d:.12s"><img src="img/k29.jpg" alt="Week 4 — knotless, done by herself" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:16px;aspect-ratio:3/4;display:block;"><p class="j-cap">Week 4 — knotless, done by herself</p></div>
+    </div>
+    <div class="grid3">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I was paying around $240 every appointment. After following along with the videos, I started doing simple styles myself and saved hundreds within months."</blockquote>
+        <div class="testi-who">
+          <img loading="lazy" decoding="async" src="data:image/jpeg;base64,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" alt="Verified buyer">
+          <div><b>Tanya M. — Atlanta, GA</b><span>Saved hundreds in months</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="--d:.08s">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My biggest fear was damaging my edges. Being able to watch the tension being done — not just read about it — made all the difference."</blockquote>
+        <div class="testi-who">
+          <img loading="lazy" decoding="async" src="data:image/jpeg;base64,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" alt="Verified buyer">
+          <div><b>Keisha R. — Houston, TX</b><span>Worth it for the tension videos</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="--d:.16s">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I originally bought it to save money. Now I love being able to fix and refresh my own braids whenever I want."</blockquote>
+        <div class="testi-who">
+          <img loading="lazy" decoding="async" src="data:image/jpeg;base64,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" alt="Verified buyer">
+          <div><b>Monique D. — Charlotte, NC</b><span>Refreshes her own braids now</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GUARANTEE ================= -->
+<section class="sect" style="padding-top:0;padding-bottom:60px;">
+  <div class="inner" style="padding-top:60px;">
+    <div class="guarantee reveal">
+      <div class="g-seal"><svg class="ic ic-seal" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 20 6v6c0 4.8-3.4 8.3-8 9.8C7.4 20.3 4 16.8 4 12V6z"/><path d="M8.5 12l2.4 2.4 4.6-5"/></svg></div>
+      <div>
+        <h3>Try it for 30 days — risk free.</h3>
+        <p>Watch the modules. Do the practice-along. If you don't feel more confident braiding your own hair, email <b>support@kastrit.com</b> within 30 days and we'll refund every cent. You keep the manual either way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="reveal" style="--d:.05s">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Is this really beginner friendly?</summary>
+        <div class="faq-body">Yes. The course was filmed specifically for people with little to no braiding experience. Every technique is shown on screen, step by step, at a pace you can follow — full speed first, then slowed down.</div>
+      </details>
+      <details>
+        <summary>What if I'm worried about damaging my hair?</summary>
+        <div class="faq-body">That fear is exactly why Module 5 (Hair Care & Safe Tension) and the Edge Protection bonus exist. You'll see safe tension demonstrated on camera — and once you're the one braiding, you control how tight every section is.</div>
+      </details>
+      <details>
+        <summary>How long will it take me to learn?</summary>
+        <div class="faq-body">Most students do their first clean braid in the very first session, wear a simple style within a week, and handle their own refreshes within a month. Everyone's pace is different — the videos wait for you, and you can rewatch every module forever.</div>
+      </details>
+      <details>
+        <summary>Will this work on my hair type — including 4C?</summary>
+        <div class="faq-body">Yes. Module 1 is filmed across different textures — from looser curls to 4C — and shows how sectioning, moisture and tension change for each one, so you work with your hair instead of against it.</div>
+      </details>
+      <details>
+        <summary>What do I need to buy to get started?</summary>
+        <div class="faq-body">A rat-tail comb, sectioning clips, an edge brush and a pack of practice hair — under $25 all in, less than most salon tips. Module 2 shows exactly what's worth buying and what to skip.</div>
+      </details>
+      <details>
+        <summary>What device can I use?</summary>
+        <div class="faq-body">Any device: phone, tablet, laptop or TV. Prop it up next to the mirror and braid along.</div>
+      </details>
+      <details>
+        <summary>How do I access the course after buying?</summary>
+        <div class="faq-body">Right after checkout you'll receive an email with your personal access link — the course opens in any browser, no app to install. The manual and bonuses download instantly from the same page. Lost the email? Write to support@kastrit.com and we'll resend it.</div>
+      </details>
+      <details>
+        <summary>What if I need help?</summary>
+        <div class="faq-body">Email support@kastrit.com — a real person answers within 24 hours on business days, whether it's an access issue or a question about the refund guarantee.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EMPOWERMENT ================= -->
+<section class="empower">
+  <div class="inner">
+    <div class="empower-grid">
+      <span class="empower-frame reveal"><img src="img/k30.jpg" alt="Mother braiding her daughter's hair in the kitchen"></span>
+      <div>
+        <p class="eyebrow reveal">More than money</p>
+        <h2 class="reveal" style="--d:.05s">The Day You Stop Asking For An Appointment</h2>
+        <p class="reveal" style="--d:.1s">Doing your own hair used to be something passed down — mother to daughter, a kitchen chair, a Sunday evening. Somewhere between the deposits and the waiting lists, it stopped being normal. This course gives you the savings, yes. But what you keep is the skill: your hands, your tension, your time. And one day it's you on the other side of the chair — teaching her.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TWO PATHS ================= -->
+<section class="sect tint">
+  <div class="inner">
+    <div class="sect-head">
+      <p class="eyebrow reveal">A year from now</p>
+      <h2 class="reveal" style="--d:.05s">Same You. Two Very Different Decembers.</h2>
+    </div>
+    <div class="paths">
+      <div class="path stay reveal">
+        <h3>Keep booking</h3>
+        <ul>
+          <li>$2,000+ more spent on installs, hair, tips and take-downs</li>
+          <li>Still texting braiders, still waiting on deposits and openings</li>
+          <li>Still sitting through someone else's tension</li>
+          <li>Exactly where you are today — one year older</li>
+        </ul>
+      </div>
+      <div class="path go reveal" style="--d:.08s">
+        <h3>Learn it once</h3>
+        <ul>
+          <li>$2,000+ still in your pocket — every year, from now on</li>
+          <li>Braids done on your couch, on your schedule, at your tension</li>
+          <li>Edges protected by the only hands that never pull too hard: yours</li>
+          <li>A skill nobody can take away — and one you can pass on</li>
+        </ul>
+      </div>
+    </div>
+    <p class="paths-kicker reveal">Both paths cost something. Only one of them <b>pays you back</b>.</p>
+  </div>
+</section>
+
+<!-- ================= FINAL DARK CTA ================= -->
+<section class="math finalcta">
+  <div class="inner">
+    <div class="final-grid">
+      <div class="final-copy">
+        <p class="eyebrow reveal">Stop paying salon prices for something you can learn yourself</p>
+        <h2 class="reveal" style="--d:.05s">Learn once. Use the skill for years.</h2>
+        <p class="body reveal" style="--d:.1s">One appointment costs around $250. The entire video course costs just $39.99 — once.</p>
+        <ul class="final-points reveal" style="--d:.15s">
+          <li>30-day money-back guarantee — you keep the manual either way</li>
+          <li>Instant access · watch on any device · rewatch forever</li>
+          <li>Launch price: rises to $59 with the next module drop</li>
+        </ul>
+        <p class="final-quote reveal" style="--d:.2s">"I originally bought it to save money. Now I love being able to fix and refresh my own braids whenever I want." — Verified buyer</p>
+      </div>
+      <div class="final-side">
+    <div class="buybox reveal" style="--d:.15s">
+      <div class="buycard">
+        <div class="buycard__media">
+            <img loading="lazy" decoding="async" src="img/k31.jpg" alt="Watch-Me Video Method — complete bundle: video course, manual and bonuses">
+        </div>
+        <div class="spec-strip">13 videos · 2h 41m · 47-page manual · Lifetime access · Any device</div>
+        <div class="buycard__body">
+          <h3 class="offer-title">Everything you get today</h3>
+          <ul class="offer-list">
+            <li><span>The Watch-Me Video Method — 13 videos (2h 41m), every braid filmed</span><b>$89.00</b></li>
+            <li><span>Hair Braiding Training Manual — 47 pages, instant PDF</span><b>$9.99</b></li>
+            <li><span>Styles Library + Edge Protection + Maintenance guides</span><b>Free</b></li>
+            <li><span>Lifetime access — pause, rewind, rewatch forever</span><b>Free</b></li>
+          </ul>
+          <div class="offer-total"><span>Total value</span><b>$98.99</b></div>
+          <div class="buycard__price">
+            <span class="buycard__was">$89.00</span>
+            <span class="buycard__now">$39.99</span>
+            <span class="buycard__save">SAVE 55%</span>
+          </div>
+          <div class="buycard__tag">Launch price · Rises to $59 with the next module drop</div>
+          <a class="btn lg" href="#" id="ctaBuyFinal" action="route">Start Watching Tonight<span class="arr">→</span></a>
+          <p class="buycard__lock"><svg class="ic-inline" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Secure checkout · Instant access · 30-day money-back guarantee</p>
+          <p class="pay-row">Visa · Mastercard · Amex · PayPal</p>
+        </div>
+      </div>
+    </div>
+      </div><!--/final-side-->
+    </div><!--/final-grid-->
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="inner footer-grid">
+    <div>
+      <span class="f-brand">KASTRIT</span>
+      <p class="f-tag">Learn to braid your own hair — watching every step being done. Your hands, your tension, your time.</p>
+    </div>
+    <div class="f-links">
+      <a href="mailto:support@kastrit.com" action="none">Support</a>
+      <a href="https://kastritofficial.com/policies/privacy-policy" action="none">Privacy</a>
+      <a href="https://kastritofficial.com/policies/terms-of-service" action="none">Terms</a>
+      <a href="https://kastritofficial.com/policies/refund-policy" action="none">Refunds</a>
+    </div>
+  </div>
+  <div class="inner footer-bottom">
+    <span>© 2026 Kastrit. All rights reserved.</span>
+    <span>Visa · Mastercard · Amex · PayPal — secure checkout</span>
+  </div>
+</footer>
+
+<!-- ================= STICKY BAR ================= -->
+<div class="sticky" id="sticky">
+  <div class="sticky-in">
+    <div class="pr"><span class="w">vs ~$250 salon</span><span class="n">$39.99<span class="save-mini">−55%</span></span></div>
+    <a href="#buy" class="btn" action="none">Get Instant Access<span class="arr">→</span></a>
+  </div>
+</div>
+
+
+
+</body>
+</html>
